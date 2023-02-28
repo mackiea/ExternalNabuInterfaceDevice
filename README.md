@@ -21,7 +21,7 @@ As well, ground rail 1 is redirected from NABU pin 26 to DB-25 pin 25, as per th
 | 3 | 3 | 3.58 MHz Clock |
 | 4 | 4 | Audio |
 | 5 | 5 | Chip Select |
-| 6 | 6 | <span style="color:blue">Address 0</span> |
+| 6 | 6 | Address 0 |
 | 7 | 7 | Address 1 |
 | 8 | 8 | Address 2 |
 | 9 | 9 | Address 3 |
