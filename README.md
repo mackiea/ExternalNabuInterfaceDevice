@@ -13,8 +13,9 @@ Since the DB-25 connector has 5 less signals available than the NABU Option Card
 As well, ground rail 1 is redirected from NABU pin 26 to DB-25 pin 25, as per the Pinout table.
 
 #Pinout
+
 | Input from NABU | Output to DB-25 | Pinout |
-| ------ | ------ |
+| --------------- | --------------- | ------ |
 | 1 | 1 | Interrupt |
 | 2 | 2 | Interrupt Acknowledge |
 | 3 | 3 | 3.58 MHz Clock |
