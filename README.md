@@ -1,7 +1,14 @@
 # External Nabu Interface Device (ENID-25)
 ![Schematic](/Schematic.png) ![Printed circuit board](/PCB.png)
 
-A simple way to export the Nabu's option card to via a common DB interface. Almost all pins map exactly from the NABU Option Card specification to the DB-25 pins, with the exception of the power pins.
+A simple way to export the NABU's option card to via a common DB interface. Almost all pins map exactly from the NABU Option Card specification to the DB-25 pins, with the exception of the power pins.
+The ENID is meant to take the place of a NABU Option Card Plate. Each NABU has 4 removable metal plates to allow for external interface and access to any  Option Cards installed.
+
+# Why?
+- I wanted to extend the abilities of the NABU. The most convenient way of doing this without disrupting the main system is to make use of the Option Card bus -- a series of 4 30-pin connectors on the motherboard that allow for the addition of peripherals and hardware extensions. My issues:
+  - I want to keep internal access to a minimum -- ideally, connect up to all 4 slots to ENIDS, then button up the NABU.
+  - I do not want to cut into the Option Card Plates -- leaving them intact, as the NABU is a collectible item with limited parts availability.
+  - I want to add protection by both limiting the exposed power access to a fusable 5V rail, and keeping the +12V and -12V rails disconnected.
 
 # Output Connector
 The DB-25 is a 25-pin interface, used in many applications, primarily RS-232 serial and PC parallel cabling. When selecting a cable or connector, care should be taken to select one where all pins are connected -- some serial cables may have only a few pins connected (RX/TX, DTS/RTS, etc).
@@ -14,8 +21,11 @@ Since the DB-25 connector has 5 less signals available than the NABU Option Card
 - -12V rail
 As well, ground rail 1 is redirected from NABU pin 26 to DB-25 pin 25, as per the Pinout table.
 
+The connected +5V rail can be connected either directly (not recommended) or connected to a fuse. The specifications call for a ~1A resettable LittleFuse-brand fuse, but other fuses can be used.
+
 # Notes
 - Ensure that the cable used is not a null-cable or loopback-cable. You can tell if pin 2 (RS-232 Receive) and pin 3 (RS-232 Transmit) are switched at each end.
+- Connecting and disconnecting the DB-25 cable exerts a considerable force on the ENID. It is recommended to add a non-conductive reinforcement across the 2 Option Card Plate bolts.
 
 # Pinout
 
@@ -50,3 +60,6 @@ As well, ground rail 1 is redirected from NABU pin 26 to DB-25 pin 25, as per th
 | 27 | Unused | Ground Rail 2 |
 | 28 | Unused | Data 0 |
 | 29 | Unused | Data 0 |
+
+#More information
+http://www.nabu.ca
