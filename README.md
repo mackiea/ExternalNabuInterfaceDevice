@@ -1,4 +1,6 @@
-# ExternalNabuInterfaceDevice
+# External Nabu Interface Device (ENID-25)
+![Schematic](/Schematic.png) ![Printed circuit board](/PCB.png)
+
 A simple way to export the Nabu's option card to via a common DB interface. Almost all pins map exactly from the NABU Option Card specification to the DB-25 pins.
 
 #Output Connector
