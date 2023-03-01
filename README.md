@@ -3,7 +3,7 @@
 
 A simple way to export the Nabu's option card to via a common DB interface. Almost all pins map exactly from the NABU Option Card specification to the DB-25 pins, with the exception of the power pins.
 
-#Output Connector
+# Output Connector
 The DB-25 is a 25-pin interface, used in many applications, primarily RS-232 serial and PC parallel cabling. When selecting a cable or connector, care should be taken to select one where all pins are connected -- some serial cables may have only a few pins connected (RX/TX, DTS/RTS, etc).
 
 # Differences
@@ -14,10 +14,10 @@ Since the DB-25 connector has 5 less signals available than the NABU Option Card
 - -12V rail
 As well, ground rail 1 is redirected from NABU pin 26 to DB-25 pin 25, as per the Pinout table.
 
-#Notes
+# Notes
 - Ensure that the cable used is not a null-cable or loopback-cable. You can tell if pin 2 (RS-232 Receive) and pin 3 (RS-232 Transmit) are switched at each end.
 
-#Pinout
+# Pinout
 
 | Input from NABU | Output to DB-25 | Pinout |
 | --------------- | --------------- | ------ |
