@@ -27,7 +27,12 @@ The connected +5V rail can be connected either directly (not recommended) or con
 - Ensure that the cable used is not a null-cable or loopback-cable. You can tell if pin 2 (RS-232 Receive) and pin 3 (RS-232 Transmit) are switched at each end.
 - Connecting and disconnecting the DB-25 cable exerts a considerable force on the ENID. It is recommended to add a non-conductive reinforcement across the 2 Option Card Plate bolts.
 
+#Caveats
+- The existing Option Card plate screws will not suffice to hold the ENID card in. Upgrade to a pair of fitting bolts and nuts.
+- The PCB is connected to the NABU as a plate by 2 bolts. Use of this involves plugging in a DB-25 connector, which exerts a considerable force on the board. I highly recommend sandwiching the PCB with a nonconductive backing material behind it, on the same bolts, to take the strain of the plugging. I also recommend providing counterstrain to the female DB-25's tabs when plugging a male DB-25 connector in.
+
 # Pinout
+ENID's pinout should map almost exactly to the Option Card pinout, with the exception of Pin 25, which on the ENID is the first ground rail; and of course, Pins 25 & 27-30 are not propagated.
 
 | Input from NABU | Output to DB-25 | Pinout |
 | --------------- | --------------- | ------ |
@@ -58,8 +63,9 @@ The connected +5V rail can be connected either directly (not recommended) or con
 | 25 | Unused | +5V Rail 2 |
 | 26 | 25 | Ground Rail 1 |
 | 27 | Unused | Ground Rail 2 |
-| 28 | Unused | Data 0 |
-| 29 | Unused | Data 0 |
+| 28 | Unused | Ground Rail 3 |
+| 29 | Unused | +12V Rail |
+| 30 | Unused | -12V Rail |
 
 #More information
 http://www.nabu.ca
