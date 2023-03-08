@@ -34,7 +34,7 @@ The connected +5V rail can be connected either directly (not recommended) or con
 - The existing Option Card plate screws will not suffice to hold the ENID card in. Upgrade to a pair of fitting bolts and nuts.
 - The PCB is connected to the NABU as a plate by 2 bolts. Use of this involves plugging in a DB-25 connector, which exerts a considerable force on the board. I highly recommend sandwiching the PCB with a nonconductive backing material behind it, on the same bolts, to take the strain of the plugging. I also recommend providing counterstrain to the female DB-25's tabs when plugging a male DB-25 connector in.
 - This is NOT a direct parallel or serial interface. Trying to connect devices as such won't work without an intermediary device, and may harm your NABU, external device, or self-esteem.
-- Mind how you plug the 1x13 Connectors into the Options Card pins. They plug into pins 1-13 and 14-26. 27-30 should not be connected. Especially considering that Pins 29 & 30 may be +12 and -12 volts respectively. I'll add pictures and video once I start adding boards.
+- Mind how you plug the 1x13 Connectors into the Options Card pins. They plug into pins 1-13 and 14-26. 27-30 should not be connected. Especially considering that Pins 29 & 30 may be +12 and -12 volts respectively. I'll add pictures and video once I start adding boards. NABU Option Card pin 1 appears to be the furthest back in the NABU enclosure.
 
 # Pinout
 ENID's pinout should map almost exactly to the Option Card pinout, with the exception of the first ground rail NABU pin 26, which on the ENID is pin 25; and of course, NABU pins 25 & 27-30 are not propagated.
