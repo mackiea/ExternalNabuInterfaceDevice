@@ -28,7 +28,7 @@ The connected +5V rail can be connected either directly (not recommended) or con
 - Ensure that the cable used is not a null-cable or loopback-cable. You can tell if pin 2 (RS-232 Receive) and pin 3 (RS-232 Transmit) are switched at each end using a multimeter.
 - Connecting and disconnecting the DB-25 cable exerts a considerable force on the ENID. It is recommended to add a non-conductive reinforcement across the 2 Option Card Plate bolts.
 
-#Caveats
+# Caveats
 - The existing Option Card plate screws will not suffice to hold the ENID card in. Upgrade to a pair of fitting bolts and nuts.
 - The PCB is connected to the NABU as a plate by 2 bolts. Use of this involves plugging in a DB-25 connector, which exerts a considerable force on the board. I highly recommend sandwiching the PCB with a nonconductive backing material behind it, on the same bolts, to take the strain of the plugging. I also recommend providing counterstrain to the female DB-25's tabs when plugging a male DB-25 connector in.
 - This is NOT a direct parallel or serial interface. Trying to connect devices as such won't work without an intermediary device, and may harm your NABU, external device, or self-esteem.
