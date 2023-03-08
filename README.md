@@ -37,8 +37,9 @@ The connected +5V rail can be connected either directly (not recommended) or con
 # Pinout
 ENID's pinout should map almost exactly to the Option Card pinout, with the exception of Pin 25, which on the ENID is the first ground rail; and of course, Pins 25 & 27-30 are not propagated.
 
-| Input from NABU | Output to DB-25 | Pinout |
-| --------------- | --------------- | ------ |
+## ENID Pins
+| ENID DB-25 | Input from NABU | Description |
+| ---------- | --------------- | ----------- |
 | 1 | 1 | Interrupt |
 | 2 | 2 | Interrupt Acknowledge |
 | 3 | 3 | 3.58 MHz Clock |
@@ -63,12 +64,16 @@ ENID's pinout should map almost exactly to the Option Card pinout, with the exce
 | 22 | 22 | Data 6 |
 | 23 | 23 | Data 7 |
 | 24 | 24 | +5V Rail 1 |
-| 25 | Unused | +5V Rail 2 |
-| 26 | 25 | Ground Rail 1 |
-| 27 | Unused | Ground Rail 2 |
-| 28 | Unused | Ground Rail 3 |
-| 29 | Unused | +12V Rail |
-| 30 | Unused | -12V Rail |
+| 25 | 26 | Ground Rail 1 |
+
+##Unused pins
+| Input from NABU | Description |
+| --------------- | ----------- |
+| 25 | +5V Rail 2 |
+| 27 | Ground Rail 2 |
+| 28 | Ground Rail 3 |
+| 29 | +12V Rail |
+| 30 | -12V Rail |
 
 #More information
 http://www.nabu.ca
