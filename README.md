@@ -9,6 +9,7 @@ The ENID is meant to take the place of a NABU Option Card Plate. Each NABU has 4
   - I want to keep internal access to a minimum -- ideally, connect up to all 4 slots to ENIDS, then button up the NABU.
   - I do not want to cut into the Option Card Plates -- leaving them intact, as the NABU is a collectible item with limited parts availability.
   - I want to add protection by both limiting the exposed power access to a fusable 5V rail, and keeping the +12V and -12V rails disconnected.
+  - I want a widely adopted interface connector. DB-25 is very popular for legacy serial and parallel PC interfacing, and cheaply available on electronics supply sites.
 
 # Output Connector
 The DB-25 is a 25-pin interface, used in many applications, primarily RS-232 serial and PC parallel cabling. When selecting a cable or connector, care should be taken to select one where all pins are connected -- some serial cables may have only a few pins connected (RX/TX, DTS/RTS, etc).
@@ -24,12 +25,13 @@ As well, ground rail 1 is redirected from NABU pin 26 to DB-25 pin 25, as per th
 The connected +5V rail can be connected either directly (not recommended) or connected to a fuse. The specifications call for a ~1A resettable LittleFuse-brand fuse, but other fuses can be used.
 
 # Notes
-- Ensure that the cable used is not a null-cable or loopback-cable. You can tell if pin 2 (RS-232 Receive) and pin 3 (RS-232 Transmit) are switched at each end.
+- Ensure that the cable used is not a null-cable or loopback-cable. You can tell if pin 2 (RS-232 Receive) and pin 3 (RS-232 Transmit) are switched at each end using a multimeter.
 - Connecting and disconnecting the DB-25 cable exerts a considerable force on the ENID. It is recommended to add a non-conductive reinforcement across the 2 Option Card Plate bolts.
 
 #Caveats
 - The existing Option Card plate screws will not suffice to hold the ENID card in. Upgrade to a pair of fitting bolts and nuts.
 - The PCB is connected to the NABU as a plate by 2 bolts. Use of this involves plugging in a DB-25 connector, which exerts a considerable force on the board. I highly recommend sandwiching the PCB with a nonconductive backing material behind it, on the same bolts, to take the strain of the plugging. I also recommend providing counterstrain to the female DB-25's tabs when plugging a male DB-25 connector in.
+- This is NOT a direct parallel or serial interface. Trying to connect devices as such won't work without an intermediary device, and may harm your NABU, external device, or self-esteem.
 
 # Pinout
 ENID's pinout should map almost exactly to the Option Card pinout, with the exception of Pin 25, which on the ENID is the first ground rail; and of course, Pins 25 & 27-30 are not propagated.
