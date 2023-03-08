@@ -2,7 +2,7 @@
 ![Schematic](/Schematic.png) ![Printed circuit board](/PCB.png)
 
 A simple way to export the NABU's option card to via a common DB interface. Almost all pins map exactly from the NABU Option Card specification to the DB-25 pins, with the exception of the power pins.
-The ENID is meant to take the place of a NABU Option Card Plate. Each NABU has 4 removable metal plates to allow for external interface and access to any  Option Cards installed.
+The ENID is meant to take the place of a NABU Option Card Plate. Each NABU has 4 removable metal plates to allow for external interface and access to any  Option Cards installed. These plates correspond to 4 30-pin Option Card interface mounted on the board.
 
 # Why?
 - I wanted to extend the abilities of the NABU. The most convenient way of doing this without disrupting the main system is to make use of the Option Card bus -- a series of 4 30-pin connectors on the motherboard that allow for the addition of peripherals and hardware extensions. My issues:
@@ -22,17 +22,19 @@ Since the DB-25 connector has 5 less signals available than the NABU Option Card
 - -12V rail
 As well, ground rail 1 is redirected from NABU pin 26 to DB-25 pin 25, as per the Pinout table.
 
-The connected +5V rail can be connected either directly (not recommended) or connected to a fuse. The specifications call for a ~1A resettable LittleFuse-brand fuse, but other fuses can be used.
+The connected +5V rail can be connected either directly (not recommended) or connected to a fuse with a 1x2 electrical jumper. The specifications call for a ~1A resettable LittleFuse-brand fuse, but other fuses can be used, if their leads fit in themsoldering holes.
 
 # Notes
 - Ensure that the cable used is not a null-cable or loopback-cable. You can tell if pin 2 (RS-232 Receive) and pin 3 (RS-232 Transmit) are switched at each end using a multimeter.
 - Connecting and disconnecting the DB-25 cable exerts a considerable force on the ENID. It is recommended to add a non-conductive reinforcement across the 2 Option Card Plate bolts.
+- The 2 1x13 connectors on the ENID card (JOP1 & JOP2) should be male, as the card is receiving power. JFUSE1 (1x3) should also be male to accommodate a jumper to select the power mode.
+- The BOM calls for 2 1x13 0.1"(2.56mm)-pitch cables, female on both ends.
 
 # Caveats
 - The existing Option Card plate screws will not suffice to hold the ENID card in. Upgrade to a pair of fitting bolts and nuts.
 - The PCB is connected to the NABU as a plate by 2 bolts. Use of this involves plugging in a DB-25 connector, which exerts a considerable force on the board. I highly recommend sandwiching the PCB with a nonconductive backing material behind it, on the same bolts, to take the strain of the plugging. I also recommend providing counterstrain to the female DB-25's tabs when plugging a male DB-25 connector in.
 - This is NOT a direct parallel or serial interface. Trying to connect devices as such won't work without an intermediary device, and may harm your NABU, external device, or self-esteem.
-- - Mind how you plug the 1x13 Connectors into the Options Card pins. They plug into pins 1-13 and 14-26. 27-30 should not be connected. Especially considering that Pins 29 & 30 may be +12 and -12 volts respectively. I'll add pictures and video once I start adding boards.
+- Mind how you plug the 1x13 Connectors into the Options Card pins. They plug into pins 1-13 and 14-26. 27-30 should not be connected. Especially considering that Pins 29 & 30 may be +12 and -12 volts respectively. I'll add pictures and video once I start adding boards.
 
 # Pinout
 ENID's pinout should map almost exactly to the Option Card pinout, with the exception of the first ground rail NABU pin 26, which on the ENID is pin 25; and of course, NABU pins 25 & 27-30 are not propagated.
