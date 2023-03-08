@@ -35,7 +35,7 @@ The connected +5V rail can be connected either directly (not recommended) or con
 - - Mind how you plug the 1x13 Connectors into the Options Card pins. They plug into pins 1-13 and 14-26. 27-30 should not be connected. Especially considering that Pins 29 & 30 may be +12 and -12 volts respectively. I'll add pictures and video once I start adding boards.
 
 # Pinout
-ENID's pinout should map almost exactly to the Option Card pinout, with the exception of Pin 25, which on the ENID is the first ground rail; and of course, Pins 25 & 27-30 are not propagated.
+ENID's pinout should map almost exactly to the Option Card pinout, with the exception of the first ground rail NABU pin 26, which on the ENID is pin 25; and of course, NABU pins 25 & 27-30 are not propagated.
 
 ## ENID Pins
 | ENID DB-25 | Input from NABU | Description |
