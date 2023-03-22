@@ -13,6 +13,11 @@ I wanted to extend the abilities of the NABU. The most convenient way of doing t
   - I want to add protection by both limiting the exposed power access to a fusable 5V rail, and keeping the +12V and -12V rails disconnected.
   - I want a widely adopted interface connector. DB-25 is very popular for legacy serial and parallel PC interfacing, and cheaply available on electronics supply sites.
 
+# Applications
+- [BEAVER Boarduino Adaptor](https://github.com/mackiea/BasicEnidArduinoValidationExchangeRrrr) to allow for testing and peripheral prototyping.
+- PC Gameport -- TBA - To support [Gameport](https://en.wikipedia.org/wiki/Game_port) joystick and peripheral input.
+- RC2014 adaptor -- TBA - To support [RC2014] (https://rc2014.co.uk) peripherals.
+
 # Output Connector
 The DB-25 is a 25-pin interface, used in many applications, primarily RS-232 serial and PC parallel cabling. When selecting a cable or connector, care should be taken to select one where all pins are connected -- some serial cables may have only a few pins connected (RX/TX, DTS/RTS, etc).
 
@@ -81,7 +86,8 @@ ENID's pinout should map almost exactly to the Option Card pinout, with the exce
 | 30 | -12V Rail |
 
 # Concerns
-- The board is anchored to the NABU box by 2 bolts. There is no reinforcement for the RS-232 connector. There is a concern that over time the stress of plugging & unplugging the connector will cause the PCB to crack from the forces required. PCBs ordered should have a composition and thickness as high as can be reasonably ordered (don't cheap out). Alternatively, a non-conducting reinforcement bar can be layered behind the PCB, connecting to the aforementioned bolts, but able to absorb the strain imparted by connecting a DB-25 connector.  
+- The board is anchored to the NABU box by 2 bolts. There is no reinforcement for the RS-232 connector. There is a concern that over time the stress of plugging & unplugging the connector will cause the PCB to crack from the forces required. PCBs ordered should have a composition and thickness as high as can be reasonably ordered (don't cheap out). Alternatively, a non-conducting reinforcement bar can be layered behind the PCB, connecting to the aforementioned bolts, but able to absorb the strain imparted by connecting a DB-25 connector.
+- The DB-25 connector, in general, is used in serial and parallel applications. None are compatible with ENID. Attempting to connect this to a serial or parallel device will very possibly cause some magic smoke to spew out. However, this is designed to be a springboard to add adapters to connect to various devices using new or existing PCBs or microcontrollers. 
 
 # More information
 http://www.nabu.ca
