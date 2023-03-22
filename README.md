@@ -7,7 +7,7 @@ The ENID is meant to take the place of a NABU Option Card Plate. Each NABU has 4
 ![Schematic](/Schematic.png) ![Printed circuit board](/PCB.png)
 
 # Why?
-- I wanted to extend the abilities of the NABU. The most convenient way of doing this without disrupting the main system is to make use of the Option Card bus -- a series of 4 30-pin connectors on the motherboard that allow for the addition of peripherals and hardware extensions. My issues:
+I wanted to extend the abilities of the NABU. The most convenient way of doing this without disrupting the main system is to make use of the Option Card bus -- a series of 4 30-pin connectors on the motherboard that allow for the addition of peripherals and hardware extensions. My issues:
   - I want to keep internal access to a minimum -- ideally, connect up to all 4 slots to ENIDS, then button up the NABU.
   - I do not want to cut into the Option Card Plates -- leaving them intact, as the NABU is a collectible item with limited parts availability.
   - I want to add protection by both limiting the exposed power access to a fusable 5V rail, and keeping the +12V and -12V rails disconnected.
@@ -22,6 +22,7 @@ Since the DB-25 connector has 5 less signals available than the NABU Option Card
 - Ground rails 2 & 3
 - +12V rail
 - -12V rail
+
 As well, ground rail 1 is redirected from NABU pin 26 to DB-25 pin 25, as per the Pinout table.
 
 The connected +5V rail can be connected either directly (not recommended) or connected to a fuse with a 1x2 electrical jumper. The specifications call for a ~1A resettable LittleFuse-brand fuse, but other fuses can be used, if their leads fit in themsoldering holes.
@@ -70,7 +71,7 @@ ENID's pinout should map almost exactly to the Option Card pinout, with the exce
 | 24 | 24 | +5V Rail 1 |
 | 25 | 26 | Ground Rail 1 |
 
-##Unused pins
+## Unused pins
 | Input from NABU | Description |
 | --------------- | ----------- |
 | 25 | +5V Rail 2 |
@@ -79,5 +80,8 @@ ENID's pinout should map almost exactly to the Option Card pinout, with the exce
 | 29 | +12V Rail |
 | 30 | -12V Rail |
 
-#More information
+# Concerns
+- The board is anchored to the NABU box by 2 bolts. There is no reinforcement for the RS-232 connector. There is a concern that over time the stress of plugging & unplugging the connector will cause the PCB to crack from the forces required. PCBs ordered should have a composition and thickness as high as can be reasonably ordered (don't cheap out). Alternatively, a non-conducting reinforcement bar can be layered behind the PCB, connecting to the aforementioned bolts, but able to absorb the strain imparted by connecting a DB-25 connector.  
+
+# More information
 http://www.nabu.ca
