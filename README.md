@@ -1,8 +1,10 @@
 # External Nabu Interface Device (ENID-25)
-![Schematic](/Schematic.png) ![Printed circuit board](/PCB.png)
 
 A simple way to export the NABU's option card to via a common DB interface. Almost all pins map exactly from the NABU Option Card specification to the DB-25 pins, with the exception of the power pins.
 The ENID is meant to take the place of a NABU Option Card Plate. Each NABU has 4 removable metal plates to allow for external interface and access to any  Option Cards installed. These plates correspond to 4 30-pin Option Card interface mounted on the board.
+
+![Printed PCB](/TopBoard.png) ![Populated PCB](/Top.png)
+![Schematic](/Schematic.png) ![Printed circuit board](/PCB.png)
 
 # Why?
 - I wanted to extend the abilities of the NABU. The most convenient way of doing this without disrupting the main system is to make use of the Option Card bus -- a series of 4 30-pin connectors on the motherboard that allow for the addition of peripherals and hardware extensions. My issues:
